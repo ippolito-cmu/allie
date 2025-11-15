@@ -1,11 +1,13 @@
 # Allie the Chess Bot
 
+> **Note**: For Allie v2 with significantly better performance, faster inference, and support for all chess time controls, see [github.com/y0mingzhang/chess-v2](https://github.com/y0mingzhang/chess-v2).
+
 Allie is a GPT2-like chess model that learns chess from human gameplay.
 It is deployed on [Lichess](https://lichess.org/@/AllieTheChessBot).
 
 Contains data and code for the paper
-> **[Human-Aligned Chess With a Bit of Search](https://arxiv.org/abs/2410.03893)**  
-> Yiming Zhang, Athul Paul Jacob, Vivian Lai, Daniel Fried, Daphne Ippolito  
+> **[Human-Aligned Chess With a Bit of Search](https://arxiv.org/abs/2410.03893)**
+> Yiming Zhang, Athul Paul Jacob, Vivian Lai, Daniel Fried, Daphne Ippolito
 > ICLR 2025
 
 ## Table of Contents
@@ -77,7 +79,7 @@ Note: Try "HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download --repo-type dataset
      ```bash
      python src/evaluation/evaluate.py \
        --config pretrain_config/medium.yaml \
-       --dataset data/lichess-2022-blitz-test/2022-test-annotated.jsonl \
+       --dataset data/lichess-2022-blitz-test/2022-test-annotated.json \
        --decode adaptive-mcts \
        --output_file "allie-eval/allie-adaptive-search.json" \
        --quick
